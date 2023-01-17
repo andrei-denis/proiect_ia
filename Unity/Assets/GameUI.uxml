@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="MainMenu" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start; flex-basis: auto; display: flex;">
+        <ui:Label text="Popo&apos;s Farm" display-tooltip-when-elided="true" style="font-size: 36px; -unity-text-align: middle-center; -unity-text-outline-width: 1px; -unity-font-style: bold; justify-content: flex-start; rotate: -5deg; align-items: center; margin-bottom: 30%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 15%;" />
+        <ui:Button text="Start" display-tooltip-when-elided="true" name="StartButton" style="justify-content: center; align-items: center; margin-top: 50px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="InGame" style="width: 100%; height: 100%; display: none;">
+        <ui:VisualElement name="LifePanel" style="width: 50%; height: auto; padding-left: 5px; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; max-height: 30px; margin-top: 5px;">
+            <ui:VisualElement name="heart1" style="background-image: url(&apos;project://database/Assets/Art/lifes/popocap2.png?fileID=21300000&amp;guid=a2a7843b5eecc7ca48c6b8213a4e97f2&amp;type=3#popocap2&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; min-width: 10%; min-height: 20px; max-width: 20%; max-height: 30px; margin-left: 3px; margin-right: 3px; display: flex;" />
+            <ui:VisualElement name="heart2" style="background-image: url(&apos;project://database/Assets/Art/lifes/popocap2.png?fileID=21300000&amp;guid=a2a7843b5eecc7ca48c6b8213a4e97f2&amp;type=3#popocap2&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; min-width: 10%; min-height: 20px; max-width: 20%; max-height: 30px; margin-left: 3px; margin-right: 3px;" />
+            <ui:VisualElement name="heart3" style="background-image: url(&apos;project://database/Assets/Art/lifes/popocap2.png?fileID=21300000&amp;guid=a2a7843b5eecc7ca48c6b8213a4e97f2&amp;type=3#popocap2&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; min-width: 10%; min-height: 20px; max-width: 20%; max-height: 30px; margin-left: 3px; margin-right: 3px;" />
+            <ui:Label text="+10" display-tooltip-when-elided="true" enable-rich-text="true" name="hearts" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20%; color: rgb(255, 255, 255); -unity-text-outline-width: 0; min-width: 10%; min-height: 20px; max-height: 30px; max-width: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ScorePanel" style="width: 50%; height: auto; padding-left: 5px; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; max-height: 30px;">
+            <ui:Label text="Score:" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-text-align: middle-center; -unity-font-style: bold; font-size: 20%; color: rgb(255, 255, 255); -unity-text-outline-width: 0; min-width: 10%; min-height: 20px; max-height: 30px; max-width: none;" />
+            <ui:Label text="100" display-tooltip-when-elided="true" enable-rich-text="true" name="score" style="-unity-text-align: middle-center; -unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255); -unity-text-outline-width: 0; min-width: 10%; min-height: 20px; max-height: 30px; max-width: none;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="GameOver" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start; flex-basis: auto; display: none;">
+        <ui:Label text="Game Over" display-tooltip-when-elided="true" style="font-size: 36px; -unity-text-align: middle-center; -unity-text-outline-width: 1px; -unity-font-style: bold; justify-content: flex-start; rotate: 0; align-items: center; margin-bottom: 25%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 15%;" />
+        <ui:VisualElement name="ScorePanel" style="width: 50%; height: auto; padding-left: 5px; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; max-height: 30px; justify-content: center;">
+            <ui:Label text="Score:" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-text-align: middle-center; -unity-font-style: bold; font-size: 20%; color: rgb(255, 255, 255); -unity-text-outline-width: 0; min-width: 10%; min-height: 20px; max-height: 30px; max-width: none;" />
+            <ui:Label text="100" display-tooltip-when-elided="true" enable-rich-text="true" name="finalScore" style="-unity-text-align: middle-center; -unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255); -unity-text-outline-width: 0; min-width: 10%; min-height: 20px; max-height: 30px; max-width: none;" />
+        </ui:VisualElement>
+        <ui:Button text="Restart" display-tooltip-when-elided="true" name="RestartButton" style="justify-content: center; align-items: center; margin-top: 50px;" />
+    </ui:VisualElement>
+</ui:UXML>

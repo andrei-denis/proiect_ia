@@ -1,0 +1,93 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin:0;
+}
+
+
+body{
+    background-image: url("../assets/CloudyCrown_Midday_Left.png");
+    background-size: cover;
+    max-height: 100%;
+    max-width: 100%;
+    background-position: center;
+    backdrop-filter: blur(5px);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width:100%;
+    justify-content: center;
+}
+.eLeft{
+    width: 20%;
+}
+.eLeftLower{
+    position: relative;
+    top:2em;
+    left: 2em;
+}
+.eLeftLower .title{
+    width: 350px;
+    background-color:brown;
+    border-radius: 10px;
+    margin: auto;
+}
+.title h1, .title h3{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: .3em .3em;
+    margin: 0;
+}
+.title h3{
+    padding-bottom: .7em;
+}
+
+.eLeftButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding:3em 0;
+}
+.eLeftButtons button{
+    margin-bottom: 1em;
+    height: 2em;
+    border: solid grey 1px;
+    border-radius: 8px;
+}
+.eLeftButtons button:hover{
+    background-color: rgb(226, 137, 107);
+}
+
+.selected{
+    background-color: rgb(231, 105, 63);
+    color: white;
+}
+
+.eCenter{
+    width:70%;
+    margin: auto;
+    position: relative;
+    margin-left: 30%;
+}
+.eCenter img{
+    display: block;
+    position: absolute;
+    top: -18px;
+    left: -28px;
+    pointer-events: none
+}
+
+.authors{
+    background-color:brown;
+    color: white;
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+    padding: .4rem 1.4rem;
+    border-radius: 10px;
+}

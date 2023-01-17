@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="eLeft">
+            <div class="eLeftLower">
+                <div class="title">
+                    <h1>Proiect IA</h1>
+                    <h3>Popo's Farm AI Edition</h3>
+                </div>
+    
+                <div class="eLeftButtons">
+                    <button type="button" class="btn btn-light selected">You vs AI!</button>
+                    <button type="button" class="btn btn-light" onclick="window.location.href='{{ url_for( 'aiPlays' ) }}';" >AI Classic Game</button>
+                    <button type="button" class="btn btn-light" onclick="window.location.href='{{ url_for( 'playerPlays' ) }}';" >Classic Game</button>
+                </div>
+            </div>
+
+            <div class="authors">
+                <p>Andrei Denis, Sg1</p>
+                <p>Teodorescu Ada, Sg5</p>
+            </div>
+            
+        </div>
+        <div class="eCenter">
+            <img src="{{ url_for('static', filename='assets/phone.svg') }}" alt="phone" width="596" height="936" >
+            <canvas id="unity-canvas" width=540 height=900 style="width: 540px; height: 900px; background: #231F20"></canvas>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='playerVSai/Build/playerVSai.loader.js') }}"></script>
+    <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "{{ url_for('static', filename='playerVSai/Build/playerVSai.data.br') }}",
+        frameworkUrl: "{{ url_for('static', filename='playerVSai/Build/playerVSai.framework.js.br') }}",
+        codeUrl: "{{ url_for('static', filename='playerVSai/Build/playerVSai.wasm.br') }}",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "RainbowPany",
+        productName: "PoposFarm-AI",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+    });
+    </script>
+    
+</body>
+</html>
